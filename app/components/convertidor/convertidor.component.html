@@ -1,0 +1,33 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="amount">Type the amount</label>
+                <input type="number" class="form-control form-control-lg" [(ngModel)]="amount" (input)="convertir()" id = "amount" placeholder="Amount">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="IGot">I got</label>
+                    <select class="form-control form-control-lg" id="IGot" [(ngModel)]="IGot" (change)="convertir()">
+                        <option *ngFor="let money of money">{{ money }}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="IWant">I want</label>
+                    <select class="form-control form-control-lg" id="IWant" [(ngModel)]="IWant" (change)="convertir()">
+                        <option *ngFor="let money of money">{{ money }}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h5 class="text-center">
+        <span class="badge badge-success">{{ amount }} {{ IGot }}</span>
+        <span class="badge badge-secondary">ARE</span>
+        <span class="badge badge-success">{{ Total|number:'0.0-2'}} {{ IWant }}</span>
+    </h5>
+</div>

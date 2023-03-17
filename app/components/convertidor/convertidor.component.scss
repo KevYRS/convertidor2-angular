@@ -1,0 +1,17 @@
+.container {
+    padding: 1rem 2rem;
+    background: radial-gradient(circle, rgba(133,157,147,255), rgba(0, 0, 0, 0) 100%);
+    border-radius: 1rem;
+}
+
+.badge {
+    margin: 2px;
+}
+label {
+    font-size: 1.3rem;
+    color: white;
+    background-color: black;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 0.5rem;
+}
